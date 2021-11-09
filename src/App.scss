@@ -1,0 +1,102 @@
+body {
+  font-family: "Mohave", sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #ece9e6; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to bottom,
+    #ffffff,
+    #ece9e6
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    #ffffff,
+    #ece9e6
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  min-height: 100vh;
+}
+
+.intro {
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.7),
+      rgba(255, 255, 255, 0.3)
+    ),
+    url("https://images.pexels.com/photos/877971/pexels-photo-877971.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+
+  &__container {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+
+    h1 {
+      color: khaki;
+      font-size: 100px;
+
+      z-index: 10;
+      margin: 140px 0;
+      padding: 40px 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 40px;
+      border-radius: 80px;
+
+      span {
+        text-shadow: 0 0 8px #fff, 0 0 12px #fff;
+        color: #fff;
+        margin: 0 20px;
+      }
+    }
+
+    p {
+      font-size: 40px;
+      font-weight: bold;
+      color: #9dd1f1;
+      text-shadow: 0 0 6px #031927;
+      position: relative;
+
+      span {
+        text-shadow: 0 0 8px #fff;
+        color: #fff;
+      }
+
+      &::after {
+        content: "";
+        height: 2px;
+        width: 400px;
+        width: 100%;
+        position: absolute;
+        background-color: #fff;
+        z-index: 100;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -10px;
+        box-shadow: 0 2px 6px #fff;
+      }
+    }
+  }
+  &__buttonWrapper {
+    padding: 14px;
+
+    button {
+      cursor: pointer;
+      padding: 14px 18px;
+      font-size: 20px;
+      border: none;
+      border-radius: 10px;
+      background-color: #508aa8;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: #fff;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        background-color: #9dd1f1;
+        color: #031927;
+      }
+    }
+  }
+}

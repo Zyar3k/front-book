@@ -1,10 +1,34 @@
-import "./App.css";
+import { useState } from "react";
+import "./App.scss";
 
 const App = () => {
+  const [isIntro, setIsIntro] = useState(true);
+
+  const hideIntro = () => {
+    setIsIntro(false);
+  };
+
   return (
     <>
+      {isIntro && (
+        <section className="intro">
+          <div className="intro__container">
+            <h1>
+              all<span>2</span>Read
+            </h1>
+            <p>
+              <span>Jedna</span> lista, by wszystkie połączyć,{" "}
+              <span>Jedna</span>, by wszystkie odnaleźć, <span>Jedna</span>, by
+              wszystkie przeczytać...
+            </p>
+            <div className="intro__buttonWrapper">
+              <button onClick={hideIntro}>Zacznij</button>
+            </div>
+          </div>
+        </section>
+      )}
       <header>
-        <h1>header logo</h1>
+        <div>header logo</div>
       </header>
       <main>
         <h1>start</h1>
